@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lynx-local"
+version = "0.1.0"
+description = "Your local intelligence. A minimal Python CLI for local language models."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+lynx = "lynx.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["lynx*"]
