@@ -1,0 +1,12 @@
+{
+  "ch01/01_char_tokenizer.py": "ff96d3d45a1db9a89c6239fa2d39e81fef5e6e2909f104dd91aa532bddd28046",
+  "ch01/02_byte_tokenizer.py": "4cfda13d9a1d185522d33ee8cae50ac6420390f67752bc46d44e1c499616ece4",
+  "ch01/03_bpe_train.py": "bbe9cd6145887f93acd12189cb2ac1cf826e8e3e79395d2e725652edbc14c8a8",
+  "ch01/04_bpe_tokenizer.py": "d3d5b4b2c426fd7207f3bc1280902f3d4b019e74c1bb9c3c0726db8b7e87b06a",
+  "ch01/05_special_token.py": "a0b782fd01baf307a58fd6fe72bbfcb8a7f6920db506dcd7938c1a1b65389db2",
+  "ch01/06_pretokenize.py": "618aaff5b0ae7e5d77971cfe4cda0528f7bef78b3409a0d78b8aedafc9863746",
+  "ch01/07_tiny_codes.py": "e1a28dd0ff82e84ff1100556c2961a1a345ea4f5ccb7311ccbfb8bf2d085e65c",
+  "codebot/tiny_codes.txt": "028e8f586383336e0c96542b45ed3e8bab4c678a200e4d725395f92de34ade44",
+  "codebot/tokenizer.py": "dde498e0613e73005691245fe9a253b848dda5bfac53216a4da4c643697ea4aa",
+  "UPSTREAM_README.md": "9a5de1e95e3e749ba72ca8aaacadd5c2a1545d6fd5d52dd67a160393b0ba3d5d"
+}

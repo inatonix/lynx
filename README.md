@@ -3,13 +3,33 @@
 **Your local intelligence.**
 
 手元のマシンで動くLLMを育てていくプロジェクト。
-最初のバージョンは、Ollama上の既存モデルと会話できる小さなPython CLIです。
-独自モデルの学習やファインチューニングはまだ実装していません。
+『ゼロから作る Deep Learning ❻』を読み進めながら実装・実験します。
+現在は第1章1.1〜1.7の公式トークナイザと、入力・語彙サイズを変えられる実験CLIを用意しています。
+LLM本体の学習は未実装です。Ollama上の既存モデルと会話するCLIも利用できます。
 
-## Quick start
+## トークナイザから始める
 
-Python 3.9以上と [Ollama](https://ollama.com/) を用意してください。
-Pythonの実行時依存パッケージはありません。
+Python 3.10以上。GPU・Ollamaは不要です。
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[tokenizer]'
+python -m lynx.tokenizer demo 1
+python -m lynx.tokenizer compare --text 'hello世界😁'
+python -m lynx.tokenizer train
+python -m lynx.tokenizer encode --text "print('Hello, Lynx!')"
+```
+
+**[1.1〜1.7の実験手順・公式ファイルの対応表](docs/tokenizer-lab.md)**
+
+公式コードとTinyCodesは `lynx/_vendor/dlfs6/` に無改変で収録。
+[出典とライセンス](lynx/_vendor/dlfs6/NOTICE.md)も同梱しています。
+
+## Ollama Chat
+
+Python 3.10以上と [Ollama](https://ollama.com/) を用意してください。
+チャットCLIにはPythonの実行時依存パッケージはありません。
 
 ```sh
 git clone https://github.com/inatonix/lynx.git
@@ -58,11 +78,13 @@ lynx "こんにちは"
 ## Development
 
 ```sh
-python3 -m unittest discover -s tests -v
+python -m pip install -e '.[tokenizer]'
+python -m unittest discover -s tests -v
 ```
 
 - `lynx/client.py`: [Ollama Chat API](https://docs.ollama.com/api/chat) 接続
 - `lynx/cli.py`: 単発質問・対話のCLI
+- `lynx/tokenizer.py`: 第1章の実験CLI
 - `tests/`: モデルのダウンロードなしで実行できるテスト
 
 モデルの重み、ローカルデータ、環境変数ファイルはGit管理対象から除外しています。

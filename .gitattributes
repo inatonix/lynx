@@ -1,0 +1,4 @@
+# Preserve upstream snapshots byte-for-byte, including their line endings.
+lynx/_vendor/dlfs6/** -text
+# Whitespace in this training corpus is data, not source formatting to fix.
+lynx/_vendor/dlfs6/codebot/tiny_codes.txt -whitespace

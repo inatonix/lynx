@@ -7,11 +7,18 @@ name = "lynx-local"
 version = "0.1.0"
 description = "Your local intelligence. A minimal Python CLI for local language models."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = []
+
+[project.optional-dependencies]
+tokenizer = ["regex>=2023.0.0", "tqdm>=4.65.0"]
 
 [project.scripts]
 lynx = "lynx.cli:main"
+lynx-tokenizer = "lynx.tokenizer:main"
 
 [tool.setuptools.packages.find]
 include = ["lynx*"]
+
+[tool.setuptools.package-data]
+lynx = ["_vendor/dlfs6/*.md", "_vendor/dlfs6/*.json", "_vendor/dlfs6/ch01/*.py", "_vendor/dlfs6/codebot/*.py", "_vendor/dlfs6/codebot/*.txt"]
