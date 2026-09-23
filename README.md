@@ -4,7 +4,7 @@
 
 手元のマシンで動くLLMを育てていくプロジェクト。
 『ゼロから作る Deep Learning ❻』を読み進めながら実装・実験します。
-現在は第1章1.1〜1.7の公式トークナイザと、入力・語彙サイズを変えられる実験CLIを用意しています。
+現在は第1章1.1〜1.7のトークナイザと、第2章2.1〜2.6のAttention・位置情報・マスクを実験できます。
 LLM本体の学習は未実装です。Ollama上の既存モデルと会話するCLIも利用できます。
 
 ## トークナイザから始める
@@ -25,6 +25,19 @@ python -m lynx.tokenizer encode --text "print('Hello, Lynx!')"
 
 公式コードとTinyCodesは `lynx/_vendor/dlfs6/` に無改変で収録。
 [出典とライセンス](lynx/_vendor/dlfs6/NOTICE.md)も同梱しています。
+
+## 第2章前半：Attentionを試す
+
+```sh
+source .venv/bin/activate
+python -m pip install -e '.[tokenizer,model]'
+python -m lynx.attention movie --query 6 4 5
+python -m lynx.attention scaling --dim 64
+python -m lynx.attention sequence --text Lynx
+python -m lynx.attention sequence --text Lynx --no-mask
+```
+
+CPUで動く未学習モデルの実験です。**[2.1〜2.6の実験手順](docs/attention-lab.md)**
 
 ## Ollama Chat
 
@@ -78,13 +91,14 @@ lynx "こんにちは"
 ## Development
 
 ```sh
-python -m pip install -e '.[tokenizer]'
+python -m pip install -e '.[tokenizer,model]'
 python -m unittest discover -s tests -v
 ```
 
 - `lynx/client.py`: [Ollama Chat API](https://docs.ollama.com/api/chat) 接続
 - `lynx/cli.py`: 単発質問・対話のCLI
 - `lynx/tokenizer.py`: 第1章の実験CLI
+- `lynx/attention.py`: 第2章前半の実験CLI
 - `tests/`: モデルのダウンロードなしで実行できるテスト
 
 モデルの重み、ローカルデータ、環境変数ファイルはGit管理対象から除外しています。

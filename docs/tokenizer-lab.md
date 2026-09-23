@@ -159,7 +159,7 @@ Lynxの `encode` は実験用JSONを読み込み、pickleは使いません。
 `demo` は公式スクリプトを別プロセスで直接実行します。
 
 ```sh
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -p 'test_tokenizer.py' -v
 ```
 
 公式ファイルのハッシュ、文字・バイトの差、特殊トークン、事前トークン化、

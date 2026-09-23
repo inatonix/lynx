@@ -9,6 +9,8 @@ for **ゼロから作る Deep Learning ❻ —LLM編**, by 斎藤 康毅, publis
 - Retrieved: 2026-09-23
 - Files: `ch01/01_char_tokenizer.py` through `ch01/07_tiny_codes.py`,
   `codebot/tokenizer.py`, `codebot/tiny_codes.txt`.
+- Chapter 2 (same commit): `ch02/01_soft_dict.py`, `ch02/02_attn_math.py`,
+  `ch02/03_attn_scaling.py`, `ch02/06_attn_mask.py`.
 - The original README is preserved as `UPSTREAM_README.md`.
 - `SHA256SUMS.json` records the original file hashes, including that README.
 

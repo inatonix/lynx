@@ -8,5 +8,9 @@
   "ch01/07_tiny_codes.py": "e1a28dd0ff82e84ff1100556c2961a1a345ea4f5ccb7311ccbfb8bf2d085e65c",
   "codebot/tiny_codes.txt": "028e8f586383336e0c96542b45ed3e8bab4c678a200e4d725395f92de34ade44",
   "codebot/tokenizer.py": "dde498e0613e73005691245fe9a253b848dda5bfac53216a4da4c643697ea4aa",
-  "UPSTREAM_README.md": "9a5de1e95e3e749ba72ca8aaacadd5c2a1545d6fd5d52dd67a160393b0ba3d5d"
+  "UPSTREAM_README.md": "9a5de1e95e3e749ba72ca8aaacadd5c2a1545d6fd5d52dd67a160393b0ba3d5d",
+  "ch02/01_soft_dict.py": "71c1e6af48ada21cdb9c6d1e50d6342194d492bc99adcd25f65cd164cd6b174c",
+  "ch02/02_attn_math.py": "54c253eaf5dd28a5690f78fda10b6bfbea33140b8d6cff0517c476cfe15a3585",
+  "ch02/03_attn_scaling.py": "f643c71ada0944b235ee7d1da14f600e63e15057ddd1953739ad2eca5e7da6d1",
+  "ch02/06_attn_mask.py": "988a358b1b49ef1ebf85f6dae791b3fee07805bc5287f72c460e8ef97d393d01"
 }

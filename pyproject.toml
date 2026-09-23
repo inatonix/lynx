@@ -12,13 +12,15 @@ dependencies = []
 
 [project.optional-dependencies]
 tokenizer = ["regex>=2023.0.0", "tqdm>=4.65.0"]
+model = ["torch>=2.5.0", "numpy>=1.24.0,<2.0.0", "matplotlib>=3.7.0"]
 
 [project.scripts]
 lynx = "lynx.cli:main"
 lynx-tokenizer = "lynx.tokenizer:main"
+lynx-attention = "lynx.attention:main"
 
 [tool.setuptools.packages.find]
 include = ["lynx*"]
 
 [tool.setuptools.package-data]
-lynx = ["_vendor/dlfs6/*.md", "_vendor/dlfs6/*.json", "_vendor/dlfs6/ch01/*.py", "_vendor/dlfs6/codebot/*.py", "_vendor/dlfs6/codebot/*.txt"]
+lynx = ["_vendor/dlfs6/*.md", "_vendor/dlfs6/*.json", "_vendor/dlfs6/ch01/*.py", "_vendor/dlfs6/ch02/*.py", "_vendor/dlfs6/codebot/*.py", "_vendor/dlfs6/codebot/*.txt"]
